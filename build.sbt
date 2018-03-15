@@ -11,7 +11,7 @@ name := "spark-avro"
 
 spName := "databricks/spark-avro"
 
-sparkVersion := "2.0.0"
+sparkVersion := "2.2.1"
 
 val testSparkVersion = settingKey[String]("The version of Spark to test against.")
 
@@ -127,7 +127,7 @@ releaseProcess := Seq[ReleaseStep](
 
 lazy val spark21xProj = project.in(file("spark-2.1.x")).settings(
   commonSettings,
-  libraryDependencies += "org.apache.spark" %% "spark-sql" % "2.1.0" % "provided"
+  libraryDependencies += "org.apache.spark" %% "spark-sql" % "2.2.1" % "provided"
 ).disablePlugins(SparkPackagePlugin)
 
 
